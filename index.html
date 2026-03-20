@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій бюджет</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>💸 Мій бюджет</h1>
+        <p class="subtitle">Контроль доходів та витрат</p>
+    </header>
+
+    <section class="balance-card">
+        <h2>Баланс</h2>
+        <p id="balance">0 грн</p>
+    </section>
+
+    <section class="summary">
+        <div class="card income">
+            <h3>Дохід</h3>
+            <p id="income">0 грн</p>
+        </div>
+
+        <div class="card expense">
+            <h3>Витрати</h3>
+            <p id="expense">0 грн</p>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h3>Додати операцію</h3>
+
+        <form id="form">
+            <input type="text" id="title" placeholder="Назва операції" required>
+            <input type="number" id="amount" placeholder="Сума" required>
+
+            <select id="type">
+                <option value="income">Дохід</option>
+                <option value="expense">Витрата</option>
+            </select>
+
+            <select id="category">
+                <option value="salary">Зарплата</option>
+                <option value="food">Їжа</option>
+                <option value="transport">Транспорт</option>
+                <option value="entertainment">Розваги</option>
+                <option value="other">Інше</option>
+            </select>
+
+            <!-- нове поле -->
+            <input type="text" id="customCategory" placeholder="Введіть свою категорію" style="display:none;">
+
+            <button type="submit">Додати</button>
+        </form>
+    </section>
+
+    <section class="list-section">
+        <h3>Історія операцій</h3>
+        <ul id="list"></ul>
+    </section>
+
+    <section class="chart-section">
+        <h3>Статистика витрат</h3>
+        <canvas id="chart"></canvas>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
