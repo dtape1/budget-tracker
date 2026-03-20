@@ -71,10 +71,6 @@
 Також я отримав практичні навички роботи з localStorage, обробкою подій та побудовою інтерфейсу користувача.
 
 
-## Посилання на GitHub
-
-https://github.com/dtape1/budget-tracker 
-
 ## Посилання на застосунок
 
 https://dtape1.github.io/budget-tracker/ 
